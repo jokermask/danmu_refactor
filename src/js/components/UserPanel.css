@@ -1,0 +1,37 @@
+.userPanel {
+  position: relative; }
+  .userPanel p {
+    margin: 0;
+    font-size: 20px; }
+  .userPanel:hover .userMenu {
+    display: block; }
+
+.userFigure {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center; }
+
+.userIcon {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  background-size: cover; }
+
+.userMenu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: all 1s;
+  background-color: #3d444c; }
+  .userMenu li {
+    width: 100%;
+    margin: .5em 0;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s; }
+    .userMenu li:hover {
+      color: #2fc4d5; }
