@@ -34,11 +34,10 @@ function commonFetcdh(url, options, method = 'GET') {
             body: searchStr
         }
     }
-    fetch(url, initObj).then((res) => {
+    var res = fetch(url, initObj).then((res) => {
         return res.json()
-    }).then((res) => {
-        return res
     })
+    return res ;
 }
 
 /**

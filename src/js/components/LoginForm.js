@@ -3,20 +3,23 @@ import { Field, reduxForm } from 'redux-form'
 import style from './LoginForm.css'
 import closeBtnPng from '../../img/close-btn.png'
 import {POST} from '../utils/ajax'
+import { SubmissionError } from 'redux-form'
 
-const validate = values => {
-    const errors = {}
-    if (!values.username) {
-        errors.errorText = '用户名不能为空'
-    }
-    if (!values.password) {
-        errors.errorText = '密码不能为空'
-    }
-    return errors
-}
 
 const loginReq = async function(values) {
-    let res = await POST("/user/login",values)
+
+    if (!values.username) {
+        throw new SubmissionError({
+            _error: '账户不能为空'
+        })
+    }
+    if (!values.password) {
+        throw new SubmissionError({
+            _error: '密码不能为空'
+        })
+    }
+
+    var res = await POST("/user/login",values)
     console.log(res)
 }
 
@@ -28,8 +31,8 @@ let LoginForm = props => {
             <form className={style.loginForm} onSubmit={ handleSubmit(loginReq) }>
                 <img className={style.closeBtn} src={closeBtnPng} alt="closeBtn" onClick={boxHandler.closeLoginBox}/>
                 <div>
-                    <label htmlFor="userName">账户</label>
-                    <Field name="userName" component="input" type="text" />
+                    <label htmlFor="username">账户</label>
+                    <Field name="username" component="input" type="text" />
                 </div>
                 <div>
                     <label htmlFor="password">密码</label>
@@ -46,7 +49,6 @@ let LoginForm = props => {
 LoginForm = reduxForm({
     // a unique name for the form
     form: 'loginForm',
-    validate,
     loginReq
 })(LoginForm)
 

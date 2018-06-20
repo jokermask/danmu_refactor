@@ -74,3 +74,7 @@
 
 .registerBtn {
   cursor: pointer; }
+
+.loginError {
+  height: 10px;
+  color: red; }

@@ -2,12 +2,22 @@ var http = require('http');
 var path = require('path');
 var session = require('express-session') ;
 var express = require('express');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
 const chokidar = require('chokidar');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const app = express();
 
+var routes = require('./routes/index');
+var user = require('./routes/user');
+var videoRoom = require('./routes/videoRoom') ;
+var upload = require('./routes/upload') ;
+var personal = require('./routes/personal') ;
+var other = require('./routes/other') ;
 
 app.use(require('morgan')('short'));
 
@@ -57,15 +67,29 @@ app.active()
 
 
 // Do anything you like with the rest of your express application.
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({
+    secret: 'danmu',
+    resave: false,
+    saveUninitialized: true
+}));
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public'));
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", function(req, res) {
-    res.sendFile(__dirname + '/public/index.html');
-});
+
+app.use('/', routes);
+app.use('/user',user);
+app.use('/videoRoom',videoRoom) ;
+app.use('/upload',upload) ;
+app.use('/personal',personal) ;
+app.use('/other',other) ;
+
 
 app.listen(3000, function(err) {
     if (err) {
