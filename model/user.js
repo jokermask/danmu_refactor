@@ -26,10 +26,6 @@ User.addUser = function(data,callback){
 }
 //find a user
 User.findUser = function(data,callback){
-  if(!data.username||!data.password){
-    callback("no username or password") ;
-    return ;
-  }
   UserInfo.findOne(data,function (err, user) {
     if (err) return callback(err) ;
     callback(null,user) ;

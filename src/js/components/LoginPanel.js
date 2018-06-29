@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 import PropTypes from 'prop-types'
 import LoginForm from './LoginForm'
+import RegisterForm from './RegisterForm'
 import style from './LoginPanel.css';
 
 class LoginPanel extends Component{
@@ -20,6 +21,7 @@ class LoginPanel extends Component{
                 <Button type="primary" onClick={boxHandler.showLoginBox}>登录</Button>
                 {loginBoxVisibility ? <LoginForm boxHandler={boxHandler}/> : ""}
                 <Button type="primary" onClick={boxHandler.showRegisterBox}>注册</Button>
+                {registerBoxVisibility ? <RegisterForm boxHandler={boxHandler}/> : ""}
             </div>
         )
     }

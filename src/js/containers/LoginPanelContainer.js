@@ -3,7 +3,8 @@
  */
 import LoginPanel from '../components/LoginPanel'
 import { connect } from 'react-redux'
-import { boxHandler } from '../actions/index'
+import { bindActionCreators } from 'redux'
+import * as boxVisibilityActions from '../reducers/boxVisibility'
 
 const mapStateToProps = state => ({
     loginBoxVisibility: state.boxVisibility.loginBoxVisibility,
@@ -12,12 +13,7 @@ const mapStateToProps = state => ({
 
 function mapDispatchToProps(dispatch) {
     return {
-        boxHandler: {
-            showLoginBox:()=>dispatch(boxHandler.showLoginBox()),
-            closeLoginBox:()=>dispatch(boxHandler.closeLoginBox()),
-            showRegisterBox:()=>dispatch(boxHandler.showRegisterBox()),
-            closeRegisterBox:()=>dispatch(boxHandler.closeRegisterBox())
-        }
+        boxHandler: bindActionCreators(boxVisibilityActions, dispatch),
     }
 }
 

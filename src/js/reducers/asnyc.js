@@ -1,39 +1,21 @@
-import { createAction, createReducer } from 'redux-act';
+import {createAction, createReducer} from 'redux-act';
 import {POST} from '../utils/ajax'
 import * as asnycStatus from './asnycState';
 
-const defaultState = {
-    isLogin:false,
-    nickname:"",
-    userIconUrl:'../../img/defaultFigure.jpg',
-    asnycStatus: asnycStatus.unsent
-}
-
-export const toLoginState = createAction()
-export const toLogoffState = createAction()
 export const start = createAction();
 export const success = createAction();
 export const fail = createAction();
 
-const loginState = createReducer({
-    [toLoginState]:(state) => ({...state, isLogin: true}),
-    [toLogoffState]:(state) => ({...state, isLogin: false}),
+const asnycReducer = createReducer({
     [start]: (state) => ({ ...state, asnycStatus: asnycStatus.loading }),
-    [success]: (state, result) => {
-        if (result.code === 1) {
-            return {...state, isLogin: false}
-        } else {
-            return {
-                ...state,
-                asnycStatus: asnycStatus.success,
-                isLogin: true,
-                nickname: result.userNickname,
-                userIconUrl: result.userIconUrl
-            }
-        }
-    },
-    [fail]: (state, result) => ({ ...state, asnycStatus: asnycStatus.failure })
-},defaultState)
+    [success]: (state, result) => ({ ...state, asnycStatus: asnycStatus.success, result }),
+    [fail]: (state, result) => ({ ...state, asnycStatus: asnycStatus.failure, result })
+}, {
+    asnycStatus: asnycStatus.unsent
+});
+
+// 1) You can use the same way as the Redux samples
+// using thunk middleware
 
 export const loginAction = (data,callback) => {
     // We don't really need the dispatch
@@ -52,7 +34,6 @@ export const loginAction = (data,callback) => {
                 //    dispatch(success(res))
                 //}
                 dispatch(success(res))
-                callback(res)
                 return res
             })
             .catch(
@@ -61,4 +42,4 @@ export const loginAction = (data,callback) => {
     };
 }
 
-export default loginState
+export default asnycReducer

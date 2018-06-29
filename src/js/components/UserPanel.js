@@ -3,16 +3,17 @@
  */
 import React, { Component } from 'react'
 import style from './UserPanel.css'
-import defaultFigure from './../../img/defaultFigure.jpg'
 
 class UserPanel extends Component{
 
     render(){
+        const { userNickname, userIconUrl } = this.props
+
         return(
         <div className={style.userPanel}>
             <div className={style.userFigure}>
-                <p><img className={style.userIcon} src={this.props.userIconUrl} alt="user-figure"/></p>
-                <p>{this.props.userName}</p>
+                <p><img className={style.userIcon} src={userIconUrl} alt="user-figure"/></p>
+                <p>{userNickname}</p>
             </div>
             <ul className={style.userMenu}>
                 <li>投稿</li>
@@ -23,9 +24,5 @@ class UserPanel extends Component{
     )}
 }
 
-UserPanel.defaultProps = {
-    userIconUrl: defaultFigure ,
-    userName: "asd"
-};
 
 export default UserPanel ;
