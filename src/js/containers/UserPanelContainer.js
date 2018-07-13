@@ -1,3 +1,18 @@
-/**
- * Created by 天俊sama on 2018/6/29.
- */
+import UserPanel from '../components/UserPanel'
+import { connect } from 'react-redux'
+
+
+const mapStateToProps = state => ({
+    userNickname:state.loginState.userNickname,
+    userIconUrl:state.loginState.userIconUrl
+})
+
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(UserPanel)

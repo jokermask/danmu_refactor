@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux'
 import loginState from './loginState'
 import boxVisibility from './boxVisibility'
-import asnycReducer from './asnyc'
+import videoInfoReducer from './videoInfoReducer'
+import videoControlReducer from './videoControlReducer'
 import { reducer as formReducer } from 'redux-form'
 
 export default combineReducers({
   loginState,
   boxVisibility,
-  asnycReducer,
+  videoInfoReducer,
+  videoControlReducer,
   form : formReducer
 })

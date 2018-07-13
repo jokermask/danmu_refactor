@@ -11,28 +11,21 @@ router.get('/', function(req, res, next) {
 
     var data = {} ;
     if(req.session.username){
-      data.buttontype = "注销" ;
-      data.nickname = req.session.nickname ;
-      data.isShow = "" ;
       Q.all([
-        findVideo(req),findRelation(req),findIconPath(req)
-      ]).spread(function(video,islike,path){
+        findVideo(req),findRelation(req)
+      ]).spread(function(video,islike){
         data.video = video ;
         data.isLike = islike ;
-        data.iconpath = path ;
-        return res.render('videoRoom',data) ;
+        return res.send(data) ;
       });
     }else{
       findVideo(req).then(function(video){
         data.video = video ;
-        data.buttontype = "登录" ;
-        data.nickname = "" ;
-        data.isLike = "like" ;
-        data.iconpath = "" ;
-        data.isShow = "hide" ;
-        return res.render('videoRoom',data) ;
+        data.isLike = false ;
+        return res.send(data) ;
       }).fail(console.error);
     }
+
 });
 //利用promise解决深层嵌套的问题
 function findVideo(req){
@@ -60,22 +53,7 @@ function findRelation(req){
     if(err){
       deferred.reject(err) ;
     }else {
-      data = relation? "unlike" : "like" ;
-      deferred.resolve(data) ;
-    }
-  });
-  return deferred.promise;
-}
-
-
-function findIconPath(req){
-  var deferred = Q.defer();
-  var data ;
-  User.getIconPath(req.session.username,function(err,path){
-    if(err){
-      deferred.reject(err) ;
-    }else{
-      data = path ;
+      data = relation? true : false ;
       deferred.resolve(data) ;
     }
   });

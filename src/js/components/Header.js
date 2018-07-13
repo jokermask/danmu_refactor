@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
 import LoginPanelContainer from '../containers/LoginPanelContainer'
-import UserPanel from './UserPanel'
+import UserPanelContainer from '../containers/UserPanelContainer'
 import PropTypes from 'prop-types'
 import './../base.css'
-import style from './Header.css'
+import style from './css/Header.css'
+
 
 
 class Header extends Component {
 
+    componentDidMount(){
+        const { checkLogin } = this.props
+        checkLogin()
+    }
 
     render() {
 
@@ -20,7 +25,7 @@ class Header extends Component {
                     <h1>Mask的弹幕网站</h1>
                     <p><b></b>记录生活，不忘初心</p>
                 </div>
-                {isLogin ? <UserPanel/> : <LoginPanelContainer/> }
+                {isLogin ? <UserPanelContainer/> : <LoginPanelContainer/> }
             </div>
         </div>
     );

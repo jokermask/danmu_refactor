@@ -1,0 +1,28 @@
+.headerWrap {
+  background-color: #3d444c;
+  color: #ccc; }
+
+.headerContainer {
+  display: flex;
+  width: 992px;
+  margin: 0 auto; }
+
+.logoArea {
+  flex-grow: 1; }
+  .logoArea h1 {
+    margin: 0;
+    color: #ccc;
+    font-weight: bold; }
+  .logoArea p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px; }
+    .logoArea p:before {
+      content: "";
+      display: inline-block;
+      height: 40px;
+      vertical-align: bottom;
+      margin-right: 5px;
+      border-top: 7px solid transparent;
+      border-left: 14px solid #2fc4d5;
+      border-bottom: 7px solid transparent; }

@@ -2,7 +2,7 @@
  * Created by 天俊sama on 2018/4/26.
  */
 import React, { Component } from 'react'
-import style from './UserPanel.css'
+import style from './css/UserPanel.css'
 
 class UserPanel extends Component{
 

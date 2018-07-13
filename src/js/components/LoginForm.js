@@ -1,7 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { message } from 'antd';
-import style from './LoginForm.css'
+import style from './css/LoginForm.css'
 import closeBtnPng from '../../img/close-btn.png'
 import { SubmissionError } from 'redux-form'
 import { connect } from 'react-redux'
@@ -35,15 +35,8 @@ let LoginForm = props => {
             }
         })
 
-
-
-
     }
 
-    const showlog = ()=>{
-        //todo headercontainer 异步获取文件,一定要有返回结果才能判断
-        console.log(isLogin) ;
-    }
 
     return (
         <div className={style.loginMask}>

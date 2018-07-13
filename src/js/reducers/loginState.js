@@ -9,13 +9,16 @@ const defaultState = {
     asnycStatus: asnycStatus.unsent
 }
 
+export const checkLogin = createAction()
 export const toLoginState = createAction()
 export const toLogoffState = createAction()
 export const start = createAction();
 export const success = createAction();
 export const fail = createAction();
 
+
 const loginState = createReducer({
+    [checkLogin]:(state,res)=>({...state,...res}),
     [toLoginState]:(state) => ({...state, isLogin: true}),
     [toLogoffState]:(state) => ({...state, isLogin: false}),
     [start]: (state) => ({ ...state, asnycStatus: asnycStatus.loading }),
@@ -27,7 +30,7 @@ const loginState = createReducer({
                 ...state,
                 asnycStatus: asnycStatus.success,
                 isLogin: true,
-                nickname: result.userNickname,
+                userNickname: result.userNickname,
                 userIconUrl: result.userIconUrl
             }
         }
@@ -45,14 +48,26 @@ export const loginAction = (data,callback) => {
         return POST('/user/login',data)
             .then((res)=>{
                 console.log(res)
-                //if(res.code===1){
-                //    message('登录失败')
-                //}else{
-                //    message('登录成功')
-                //    dispatch(success(res))
-                //}
                 dispatch(success(res))
-                callback(res)
+                return res
+            })
+            .catch(
+                dispatch(fail())
+            )
+    };
+}
+
+export const checkLoginAction = () => {
+    // We don't really need the dispatch
+    // but here it is if you don't bind your actions
+    return dispatch => {
+        // state: { running: false, result: false }
+        dispatch(start())
+        // state: { running: true, result: false }
+        return POST('/user/isLog')
+            .then((res)=>{
+                console.log(res)
+                dispatch(checkLogin(res))
                 return res
             })
             .catch(

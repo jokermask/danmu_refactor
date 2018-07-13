@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import style from './RegisterForm.css'
+import style from './css/RegisterForm.css'
 import closeBtnPng from '../../img/close-btn.png'
 import {POST} from '../utils/ajax'
 import { SubmissionError } from 'redux-form'

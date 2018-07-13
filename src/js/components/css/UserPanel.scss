@@ -1,0 +1,49 @@
+$userIconSize: 70px ;
+
+.userPanel{
+  position: relative;
+  p{
+    margin: 0;
+    font-size: 20px;
+  }
+  &:hover{
+    .userMenu{
+      display: block;
+    }
+  }
+}
+
+.userFigure{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.userIcon{
+  height: $userIconSize ;
+  width: $userIconSize ;
+  border-radius: ($userIconSize/2);
+  background-size: cover ;
+}
+
+.userMenu{
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center ;
+  transition: all 1s ;
+  background-color: #3d444c;
+  li{
+    width: 100% ;
+    margin: .5em 0;
+    font-size: 18px ;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+      color: #2fc4d5;
+    }
+  }
+}

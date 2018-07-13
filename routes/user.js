@@ -26,6 +26,7 @@ router.post('/register', function (req,res) {
           data.code = 0 ;
           req.session.username = user.username ;
           req.session.nickname = user.nickname ;
+          req.session.icon_path = user.icon_path ;
           return res.send(data) ;
         }
       });
@@ -43,9 +44,10 @@ router.post('/login',function(req,res){
       data.code = 0 ;
       data.userNickname = user.nickname ;
       data.userName = user.username ;
+      data.userIconUrl = user.icon_path ;
       req.session.username = user.username ;
       req.session.nickname = user.nickname ;
-      data.userIconUrl = user.icon_path ;
+      req.session.icon_path = user.icon_path ;
       res.send(data) ;
     }else{
       data.code = 1 ;
@@ -56,9 +58,15 @@ router.post('/login',function(req,res){
 //判断用户的状态
 router.post('/isLog',function(req,res){
   if(req.session.username){
-    return res.send({userstate:1}) ;
+    return res.send({
+      isLogin: true,
+      userNickname: req.session.nickname,
+      userIconUrl: req.session.icon_path
+    }) ;
   }else{
-    return res.send({userstate:0}) ;
+    return res.send({
+      isLogin:false
+    }) ;
   }
 });
 

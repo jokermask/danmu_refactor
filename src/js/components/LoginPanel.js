@@ -6,7 +6,7 @@ import { Button } from 'antd';
 import PropTypes from 'prop-types'
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
-import style from './LoginPanel.css';
+import style from './css/LoginPanel.css';
 
 class LoginPanel extends Component{
 
