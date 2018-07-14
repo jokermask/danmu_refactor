@@ -58,6 +58,7 @@ $pro_img: url('../../../img/pro.png') ;
   text-indent: 5px;
   background-color: $video_block_bg;
   word-break: break-all;
+  transition: all 0.5s;
 }
 
 .playBtn{

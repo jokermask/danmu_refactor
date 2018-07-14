@@ -10,6 +10,7 @@ $pale-blue : #1399C7 ;
 .videoLayout{
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .danmuContainer{
@@ -50,9 +51,9 @@ $pale-blue : #1399C7 ;
 .playBtn{
   display: inline-block;
   height: 24px;
-  width: 40px;
+  width: 35px;
   border: 0;
-
+  cursor: pointer;
 }
 
 .playing{
@@ -64,6 +65,7 @@ $pale-blue : #1399C7 ;
 
 .videoProgress{
   width: 650px;
+  margin-left: 5px;
 }
 
 .stop{

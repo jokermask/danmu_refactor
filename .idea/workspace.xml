@@ -2,38 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa7258f4-44b0-40ac-b875-0e53fa982778" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/img/cover-1460427116949.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/components/App.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/reducers/asnyc.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/videoRoom.js" afterPath="$PROJECT_DIR$/routes/videoRoom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/App.js" afterPath="$PROJECT_DIR$/src/js/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/Header.js" afterPath="$PROJECT_DIR$/src/js/components/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/LoginForm.js" afterPath="$PROJECT_DIR$/src/js/components/LoginForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/LoginPanel.js" afterPath="$PROJECT_DIR$/src/js/components/LoginPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/RegisterForm.js" afterPath="$PROJECT_DIR$/src/js/components/RegisterForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/UserPanel.js" afterPath="$PROJECT_DIR$/src/js/components/UserPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/HeaderContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/HeaderContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/UserPanelContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/UserPanelContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/index.js" afterPath="$PROJECT_DIR$/src/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/reducers/index.js" afterPath="$PROJECT_DIR$/src/js/reducers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/reducers/loginState.js" afterPath="$PROJECT_DIR$/src/js/reducers/loginState.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/like.png" afterPath="$PROJECT_DIR$/src/img/unmarked.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/unlike.png" afterPath="$PROJECT_DIR$/src/img/marked.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/Header.css" afterPath="$PROJECT_DIR$/src/js/components/css/Header.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/Header.scss" afterPath="$PROJECT_DIR$/src/js/components/css/Header.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/LoginForm.css" afterPath="$PROJECT_DIR$/src/js/components/css/LoginForm.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/LoginForm.scss" afterPath="$PROJECT_DIR$/src/js/components/css/LoginForm.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/LoginPanel.css" afterPath="$PROJECT_DIR$/src/js/components/css/LoginPanel.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/LoginPanel.scss" afterPath="$PROJECT_DIR$/src/js/components/css/LoginPanel.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/RegisterForm.css" afterPath="$PROJECT_DIR$/src/js/components/css/RegisterForm.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/RegisterForm.scss" afterPath="$PROJECT_DIR$/src/js/components/css/RegisterForm.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/UserPanel.css" afterPath="$PROJECT_DIR$/src/js/components/css/UserPanel.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/components/UserPanel.scss" afterPath="$PROJECT_DIR$/src/js/components/css/UserPanel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/VideoRoom.js" afterPath="$PROJECT_DIR$/src/js/components/VideoRoom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/css/VideoBlcok.css" afterPath="$PROJECT_DIR$/src/js/components/css/VideoBlcok.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss" afterPath="$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/css/VideoRoom.css" afterPath="$PROJECT_DIR$/src/js/components/css/VideoRoom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/css/VideoRoom.scss" afterPath="$PROJECT_DIR$/src/js/components/css/VideoRoom.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/VideListContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/VideListContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/reducers/videoControlReducer.js" afterPath="$PROJECT_DIR$/src/js/reducers/videoControlReducer.js" />
     </list>
     <ignored path="react-learn-1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,30 +31,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="VideoRoom.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VideoRoom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/VideoRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.285714">
-              <caret line="67" column="86" selection-start-line="67" selection-start-column="86" selection-end-line="67" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.38250428">
+              <caret line="127" column="34" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoRoom.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoRoom.scss">
+      <file leaf-file-name="videoControlReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/reducers/videoControlReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41779497">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unmarked.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/img/unmarked.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="VideoRoomContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="27" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -91,11 +71,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="videoControlReducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/reducers/videoControlReducer.js">
+      <file leaf-file-name="VideoRoom.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoRoom.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="6.3125">
+              <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unmarked.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/img/unmarked.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideListContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/containers/VideListContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="14" />
+              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoBlcok.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5333333">
+              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -114,28 +121,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.2727275">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginState.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/reducers/loginState.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoRoomContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -191,23 +178,23 @@
         <option value="$PROJECT_DIR$/src/js/components/VideoBlcok.scss" />
         <option value="$PROJECT_DIR$/src/js/components/css/RegisterForm.css" />
         <option value="$PROJECT_DIR$/src/js/components/css/VideoBlcok.css" />
-        <option value="$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss" />
         <option value="$PROJECT_DIR$/src/js/components/main.js" />
         <option value="$PROJECT_DIR$/src/js/components/App.js" />
         <option value="$PROJECT_DIR$/src/js/index.js" />
         <option value="$PROJECT_DIR$/src/js/components/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/src/js/containers/VideListContainer.js" />
         <option value="$PROJECT_DIR$/src/js/components/Main.js" />
         <option value="$PROJECT_DIR$/src/js/components/VideoBlock.js" />
         <option value="$PROJECT_DIR$/model/video.js" />
         <option value="$PROJECT_DIR$/routes/videoRoom.js" />
         <option value="$PROJECT_DIR$/src/js/reducers/videoReducer.js" />
         <option value="$PROJECT_DIR$/src/js/reducers/videoInfoReducer.js" />
-        <option value="$PROJECT_DIR$/src/js/reducers/videoControlReducer.js" />
         <option value="$PROJECT_DIR$/src/js/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/js/containers/VideListContainer.js" />
+        <option value="$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss" />
         <option value="$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js" />
-        <option value="$PROJECT_DIR$/src/js/components/VideoRoom.js" />
         <option value="$PROJECT_DIR$/src/js/components/css/VideoRoom.scss" />
+        <option value="$PROJECT_DIR$/src/js/reducers/videoControlReducer.js" />
+        <option value="$PROJECT_DIR$/src/js/components/VideoRoom.js" />
       </list>
     </option>
   </component>
@@ -255,6 +242,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -496,6 +484,28 @@
               <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-learn-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-learn-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -527,7 +537,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -535,7 +544,7 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../danmu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="E:\node\node.exe" />
@@ -640,7 +649,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33032694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2688414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -788,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.355556">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -827,13 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/containers/VideListContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -952,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,18 +974,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/marked.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/unmarked.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoBlcok.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5333333">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.2727275">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/js/containers/VideListContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1004,36 +1016,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/reducers/videoControlReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoRoom.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="14" />
+        <state vertical-scroll-proportion="6.3125">
+          <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/marked.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/js/containers/VideoRoomContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/reducers/videoControlReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/VideoRoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.285714">
-          <caret line="67" column="86" selection-start-line="67" selection-start-column="86" selection-end-line="67" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/unmarked.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/css/VideoRoom.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41779497">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.38250428">
+          <caret line="127" column="34" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="34" />
           <folding />
         </state>
       </provider>

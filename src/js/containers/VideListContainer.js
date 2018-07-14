@@ -31,7 +31,7 @@ class VideoList extends Component{
 }
 
 const mapStateToProps = state => ({
-    videolist:state.videoReducer.videolist
+    videolist:state.videoInfoReducer.videolist
 })
 
 function mapDispatchToProps(dispatch) {

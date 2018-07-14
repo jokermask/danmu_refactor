@@ -1,6 +1,7 @@
 .videoLayout {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 50px; }
 
 .danmuContainer {
   position: relative;
@@ -35,8 +36,9 @@
 .playBtn {
   display: inline-block;
   height: 24px;
-  width: 40px;
-  border: 0; }
+  width: 35px;
+  border: 0;
+  cursor: pointer; }
 
 .playing {
   display: inline-block;
@@ -45,7 +47,8 @@
   background-color: white; }
 
 .videoProgress {
-  width: 650px; }
+  width: 650px;
+  margin-left: 5px; }
 
 .stop {
   display: inline-block;
