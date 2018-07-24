@@ -1,12 +1,12 @@
-.danmuContainer {
+:global(.danmuContainer) {
   width: 800px;
   height: 450px;
   position: relative;
   background-color: black;
   overflow: hidden; }
 
-.singleDanmu {
+:global(.singleDanmu) {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  display: inline-block;
+  white-space: nowrap;
   z-index: 100; }

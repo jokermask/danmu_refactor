@@ -5,7 +5,8 @@ import { getDanmuByVideo } from '../reducers/danmuReducer'
 const mapStateToProps = state => ({
     danmulist:state.danmuReducer.danmulist,
     isPlaying:state.videoControlReducer.isPlaying,
-    currentTime:state.videoControlReducer.currentTime
+    currentTime:state.videoControlReducer.currentTime,
+    canPlayThrough:state.videoControlReducer.canPlayThrough
 })
 
 function mapDispatchToProps(dispatch) {

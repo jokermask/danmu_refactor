@@ -27,12 +27,6 @@ class VideoRoom extends Component{
             this.videoEle.currentTime = percent * this.videoEle.duration
             videoControl.setPlayProgress(percent*100)
         })
-        //if(controlState.isPlaying) {
-        //
-        //}
-        //if(controlState.isDanmuOn){
-        //    //danmuFlag = setInterval(loadDanmu, 1000);
-        //}
     }
 
     render(){
