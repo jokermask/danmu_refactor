@@ -26,7 +26,8 @@ function mapDispatchToProps(dispatch) {
             setDanmuColor:(val)=>{dispatch(controlFuns.setDanmuColor(val))},
             setDanmuInput:(val)=>{dispatch(controlFuns.setDanmuInput(val))},
             setVol:(val)=>{dispatch(controlFuns.setVol(val))},
-            setPlayProgress:(val)=>{dispatch(controlFuns.setPlayProgress(val))}
+            setPlayProgress:(val)=>{dispatch(controlFuns.setPlayProgress(val))},
+            setCurrentTime:(val)=>{dispatch(controlFuns.setCurrentTime(val))}
         }
     }
 }

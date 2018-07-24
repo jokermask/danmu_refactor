@@ -1,14 +1,16 @@
 import React,{Component} from 'react'
 import { Progress, Radio, Spin, Slider } from 'antd'
+import DanmuContainer from '../containers/DanmuContainer'
 import style from './css/VideoRoom.css'
 import danmuSettingCloseImg from '../../img/danmu-setting-close.png'
 
 class VideoRoom extends Component{
 
     componentDidMount(){
-        const { getVideo, videoControl, controlState } = this.props
+        const { getVideo, videoControl } = this.props
         const videoId = this.props.match.params.videoId
         getVideo({_id:videoId})
+
         //init video
         this.videoEle = document.getElementById("video")
         this.videoEle.addEventListener('canplay',()=>{
@@ -17,6 +19,7 @@ class VideoRoom extends Component{
         this.videoEle.addEventListener('ended',()=>{
             videoControl.togglePlayState()
             window.clearInterval(this.progressFlag)
+            window.clearInterval(this.timeFlag)
         })
         var progressBar = this.refs.progressBar
         progressBar.addEventListener('click',(e)=>{
@@ -35,7 +38,7 @@ class VideoRoom extends Component{
     render(){
 
         const {videoInfo, controlState, videoControl} = this.props
-        console.log(controlState)
+        const videoId = this.props.match.params.videoId
         const video = videoInfo.video
         const isLike = videoInfo.isLike
         const RadioGroup = Radio.Group
@@ -85,9 +88,14 @@ class VideoRoom extends Component{
                     var percent = (this.videoEle.currentTime / this.videoEle.duration)*100
                     videoControl.setPlayProgress(percent)
                 }, 60)
+                this.timeFlag = setInterval(()=> {
+                    var currentTime = this.videoEle.currentTime
+                    videoControl.setCurrentTime(currentTime)
+                }, 1000)
             }else{
                 videoEle.pause()
                 window.clearInterval(this.progressFlag)
+                window.clearInterval(this.timeFlag)
             }
             videoControl.togglePlayState()
         }
@@ -114,10 +122,10 @@ class VideoRoom extends Component{
         return(
             <div className={style.videoLayout}>
                 <div className={style.videoContainer}>
-                    <div className={style.danmuContainer}>
+                    <DanmuContainer className={style.danmuContainer} videoId={videoId}>
                         {controlState.canPlayThrough?"":<div className={style.loadingIcon}><Spin size="large"/></div>}
                         <video className={style.video} id="video" src={video.path} data-id={video._id} data-author={video.author_username} preload="true"/>
-                    </div>
+                    </DanmuContainer>
                     <div className={style.videoControls}>
                         <div className={style.progressLayer}>
                             <button className={style.playBtn} title="Play" onClick={togglePlayState}><span className={controlState.isPlaying?style.playing:style.stop}></span></button>

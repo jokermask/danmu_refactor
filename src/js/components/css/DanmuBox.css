@@ -1,0 +1,12 @@
+.danmuContainer {
+  width: 800px;
+  height: 450px;
+  position: relative;
+  background-color: black;
+  overflow: hidden; }
+
+.singleDanmu {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 100; }
