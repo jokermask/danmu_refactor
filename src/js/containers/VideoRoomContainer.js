@@ -4,6 +4,8 @@
 import VideoRoom from '../components/VideoRoom'
 import { connect } from 'react-redux'
 import { getVideo } from '../reducers/videoInfoReducer'
+import { uploadDanmu } from '../reducers/danmuReducer'
+import {checkLoginAction} from '../reducers/loginState'
 import  * as controlFuns  from '../reducers/videoControlReducer'
 
 const mapStateToProps = state => ({
@@ -13,8 +15,14 @@ const mapStateToProps = state => ({
 
 function mapDispatchToProps(dispatch) {
     return {
+        checkLogin: (callback) => {
+            dispatch(checkLoginAction(callback))
+        },
         getVideo: (data) => {
             dispatch(getVideo(data))
+        },
+        uploadDanmu: (data,callback)=>{
+            dispatch(uploadDanmu(data,callback))
         },
         videoControl:{
             togglePlayState:()=>{dispatch(controlFuns.togglePlayState())},

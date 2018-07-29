@@ -10,7 +10,7 @@ const videoListStyle = {
     display: 'flex',
     justifyContent: 'center',
     width: '992px',
-    margin: '0 auto'
+    margin: '50px auto 0 auto'
 }
 
 class VideoList extends Component{

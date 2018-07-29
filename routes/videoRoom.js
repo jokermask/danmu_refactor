@@ -86,10 +86,13 @@ router.post('/addDanmu',function(req,res,next){
     play_time: req.body.play_time
   }
 
+  console.log(data)
   Danmu.addOne(data,function(err,item){
     if(err){
+      console.log(err)
       return res.send(err) ;
     }else{
+      console.log(item)
       return res.send(item) ;
     }
   });

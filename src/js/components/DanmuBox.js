@@ -26,13 +26,14 @@ class DanmuBox extends Component{
 
     componentWillReceiveProps(nextProps){
         const { danmulist, currentTime, isPlaying } = this.props
-        if(isPlaying&&currentTime===this.currentTime) {
+
+        if(isPlaying&&currentTime!=this.currentTime) {
             danmulist.forEach(danmu=>{
                 if(danmu.play_time === currentTime) {
                     this.addDanmu(danmu)
                 }
             })
-            this.currentTime++
+            this.currentTime = currentTime
         }
     }
 
@@ -44,8 +45,8 @@ class DanmuBox extends Component{
         return true
     }
 
-    getEmptyRow(type){
-
+    getEmptyRow = (type)=>{
+        //判断弹幕应该出现在屏幕哪个位置
         switch (type){
             case 'top':{
                 for(let i=0;i<this.rowNum;i++){
@@ -89,7 +90,7 @@ class DanmuBox extends Component{
         }
     }
 
-    getDanmuConfig= (danmu)=>{
+    getDanmuConfig = (danmu)=>{
         var config = {}
         switch(danmu.danmu_type){
             case 'top':
@@ -100,7 +101,7 @@ class DanmuBox extends Component{
                     'color': danmu.color,
                     'fontSize': this.fontSizeArr[danmu.font_size] + 'px',
                     'left': '50%',
-                    'margin-left': -$("#" + danmu._id).width() / 2,
+                    'margin-left': -$("#" + danmu._id).width()/2,
                     'top': rowIdx * this.maxFontSize + 'px'
                 }
                 config.ani = (danmuItem)=> {
@@ -118,7 +119,7 @@ class DanmuBox extends Component{
                     'color':danmu.color,
                     'fontSize': this.fontSizeArr[danmu.font_size]+'px',
                     'left': '50%',
-                    'margin-left': -$("#" + danmu._id).width() / 2,
+                    'margin-left': -$("#" + danmu._id).width()/2,
                     'bottom': rowIdx*this.maxFontSize + 'px'
                 }
                 config.ani = (danmuItem)=> {
@@ -153,17 +154,19 @@ class DanmuBox extends Component{
     addDanmu = (danmu)=>{
         const danmuItem = $("<span class='singleDanmu'></span>")
         const container = $(".danmuContainer")
-        const danmuConfig = this.getDanmuConfig(danmu)
-        const danmuCss = danmuConfig.css
-        const danmuAni = danmuConfig.ani
+        danmu._id = danmu._id ? danmu._id : parseInt(new Date().getTime()).toString() //新的弹幕先用时间做id
         danmuItem.text(danmu.content)
         danmuItem.attr('id',danmu._id)
-        danmuItem.css(danmuCss)
-        if(danmu.isNew){//用户弹幕
+
+        if(danmu.isNew){//用户新发的弹幕用红色边框标出
             danmuItem.css("border","solid 1px red")
         }
 
-        container.append(danmuItem)
+        container.append(danmuItem)//添加到容器后再给css和动画
+        const danmuConfig = this.getDanmuConfig(danmu)
+        const danmuCss = danmuConfig.css
+        const danmuAni = danmuConfig.ani
+        danmuItem.css(danmuCss)
         setTimeout(danmuAni(danmuItem),1000);
     }
 

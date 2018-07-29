@@ -1,16 +1,16 @@
 
-*{
+:global(*){
   padding: 0;
   margin: 0;
 }
 
 
-.clearfix::after{
+:global(.clearfix::after){
   display: block;
   content: "";
   clear: both ;
 }
 
-ul { list-style: none; }
+:global(ul) { list-style: none; }
 
-a { text-decoration: none; }
+:global(a) { text-decoration: none; }

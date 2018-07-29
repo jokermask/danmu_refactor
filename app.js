@@ -91,14 +91,22 @@ app.use('/personal',personal) ;
 app.use('/other',other) ;
 
 
-app.listen(3000, function(err) {
+
+var server = http.createServer(app);
+
+require('./socketServer').listen(server)//websocket
+
+server.listen(process.env.PORT || 3000, function(err) {
     if (err) {
         console.error(err);
         return;
     }
-    // log server running
-    console.log('Listening at http://localhost:3000/');
+    console.log("Listening on %j", server.address());
 });
+//app.listen(3000, function(err) {
+//    // log server running
+//    console.log('Listening at http://localhost:3000/');
+//});
 //if (require.main === module) {
 //    var server = http.createServer(app);
 //    server.listen(process.env.PORT || 3000, function() {

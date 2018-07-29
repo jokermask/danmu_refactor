@@ -4,6 +4,7 @@ import boxVisibility from './boxVisibility'
 import videoInfoReducer from './videoInfoReducer'
 import videoControlReducer from './videoControlReducer'
 import danmuReducer from './danmuReducer'
+import messageBoxReducer from './messageBoxReducer'
 import { reducer as formReducer } from 'redux-form'
 
 export default combineReducers({
@@ -12,5 +13,6 @@ export default combineReducers({
     videoInfoReducer,
     videoControlReducer,
     danmuReducer,
+    messageBoxReducer,
     form : formReducer
 })

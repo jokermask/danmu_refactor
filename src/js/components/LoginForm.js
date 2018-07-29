@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { message } from 'antd';
+import { message } from 'antd'
 import style from './css/LoginForm.css'
 import closeBtnPng from '../../img/close-btn.png'
 import { SubmissionError } from 'redux-form'

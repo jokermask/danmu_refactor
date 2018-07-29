@@ -11,7 +11,7 @@ class Header extends Component {
 
     componentDidMount(){
         const { checkLogin } = this.props
-        checkLogin()
+        checkLogin(null)
     }
 
     render() {

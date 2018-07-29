@@ -49,6 +49,7 @@ export const loginAction = (data,callback) => {
             .then((res)=>{
                 console.log(res)
                 dispatch(success(res))
+                callback(res)
                 return res
             })
             .catch(
@@ -57,7 +58,7 @@ export const loginAction = (data,callback) => {
     };
 }
 
-export const checkLoginAction = () => {
+export const checkLoginAction = (callback) => {
     // We don't really need the dispatch
     // but here it is if you don't bind your actions
     return dispatch => {
@@ -68,6 +69,7 @@ export const checkLoginAction = () => {
             .then((res)=>{
                 console.log(res)
                 dispatch(checkLogin(res))
+                if(callback)callback(res)
                 return res
             })
             .catch(

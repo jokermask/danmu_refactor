@@ -1,8 +1,10 @@
 import React,{Component} from 'react'
-import { Progress, Radio, Spin, Slider } from 'antd'
+import { Progress, Radio, Spin, Slider, message } from 'antd'
 import DanmuContainer from '../containers/DanmuContainer'
+import MessageBoxContainer from '../containers/MessageBoxContainer'
 import style from './css/VideoRoom.css'
 import danmuSettingCloseImg from '../../img/danmu-setting-close.png'
+import io from 'socket.io-client'
 
 class VideoRoom extends Component{
 
@@ -27,11 +29,41 @@ class VideoRoom extends Component{
             this.videoEle.currentTime = percent * this.videoEle.duration
             videoControl.setPlayProgress(percent*100)
         })
+        //init this.socket
+        this.initSocket()
+    }
+
+    initSocket(){
+        const danmuBox = this.danmuContainer.getWrappedInstance()
+        const messageBox = this.messageBoxContainer.getWrappedInstance()
+        const roomId = this.props.match.params.videoId
+        const { controlState } = this.props
+
+
+        this.socket = io.connect("http://localhost:3000",['websocket'])
+        let socket = this.socket
+        //加入自己所在视频的聊天房间
+        socket.emit('joinRoom',roomId)
+
+        socket.on('connect', function () {
+
+            socket.on('message',function(danmu){
+                //如果播放时间之差小于2秒才添加弹幕
+                if(Math.abs(danmu.play_time-controlState.currentTime)<5){
+                    danmuBox.addDanmu(danmu)
+                    messageBox.addNewMessage(danmu)
+                }
+            })
+
+            socket.on('disconnect',function(){
+                console.log("disconnect")
+            })
+        })
     }
 
     render(){
 
-        const {videoInfo, controlState, videoControl} = this.props
+        const {videoInfo, controlState, videoControl, checkLogin, uploadDanmu} = this.props
         const videoId = this.props.match.params.videoId
         const video = videoInfo.video
         const isLike = videoInfo.isLike
@@ -112,17 +144,48 @@ class VideoRoom extends Component{
             }
         }
 
+        const onInputChange = (e)=>{
+            videoControl.setDanmuInput(e.target.value)
+        }
+
+        const sendDanmu = () => {
+            const danmuBox = this.danmuContainer.getWrappedInstance()
+            const messageBox = this.messageBoxContainer.getWrappedInstance()
+            let socket = this.sockete
+            var newDanmu = {
+                color: controlState.danmuColor,
+                content: controlState.danmuInput,
+                font_type: controlState.danmuSize,
+                danmu_type:controlState.danmuStyle,
+                play_time: controlState.currentTime,
+                video_id: videoId,
+                isNew:true
+            }
+            checkLogin((res)=>{
+                if(res.isLogin){
+                    uploadDanmu(newDanmu,(danmu)=>{
+                        danmuBox.addDanmu(danmu)
+                        socket.emit('message',danmu);
+                        messageBox.addNewMessage(danmu)
+                    })
+                }else{
+                    message.error('登录之后才能发送弹幕')
+                }
+            })
+
+        }
+
 
         return(
             <div className={style.videoLayout}>
                 <div className={style.videoContainer}>
-                    <DanmuContainer className={style.danmuContainer} videoId={videoId}>
+                    <DanmuContainer className={style.danmuContainer} videoId={videoId} ref={(node) => this.danmuContainer = node}>
                         {controlState.canPlayThrough?"":<div className={style.loadingIcon}><Spin size="large"/></div>}
                         <video className={style.video} id="video" src={video.path} data-id={video._id} data-author={video.author_username} preload="true"/>
                     </DanmuContainer>
                     <div className={style.videoControls}>
                         <div className={style.progressLayer}>
-                            <button className={style.playBtn} title="Play" onClick={togglePlayState}><span className={controlState.isPlaying?style.playing:style.stop}></span></button>
+                            <button className={style.playBtn} title="Play" onClick={togglePlayState}><span className={controlState.isPlaying?style.playing:style.stop}/></button>
                             <div className={style.videoProgress}  ref="progressBar"><Progress percent={controlState.playPercent} showInfo={false} strokeWidth={15} width={24}/></div>
                             <div className={style.volumeControl}>
                                 <b className={controlState.volPercent>0?style.volumeOn:style.volumeOff} onClick={toggleVol}/>
@@ -131,20 +194,15 @@ class VideoRoom extends Component{
                             <div className={controlState.isDanmuOn?style.danmuOn:style.danmuOff} title="弹幕开关"></div>
                         </div>
                         <div className={style.sendLayer}>
-                            <b className={style.danmuSettingIcon} title="设置弹幕" onClick={videoControl.toggleSettingMenu}></b>
+                            <b className={style.danmuSettingIcon} title="设置弹幕" onClick={videoControl.toggleSettingMenu}/>
                             {controlState.isSettingMenuOn ?danmuSetting:""}
-                            <input className={style.danmuInput} type="text"/>
-                            <input className={style.sendDanmuBtn} type="button" value="发送弹幕"/>
-                            <b className={isLike?style.videoMarked:style.videoUnmarked} title="收藏或取消"></b>
+                            <input className={style.danmuInput} onChange={onInputChange} type="text"/>
+                            <input className={style.sendDanmuBtn} onClick={sendDanmu} type="button" value="发送弹幕"/>
+                            <b className={isLike?style.videoMarked:style.videoUnmarked} title="收藏或取消"/>
                         </div>
                     </div>
                 </div>
-                <div className={style.messagesBox}>
-                    <p className={style.messagesBoxTittle}>即时信息</p>
-                    <div className={style.messagesBoxContent}>
-                        <ul className={style.messagesList}></ul>
-                    </div>
-                </div>
+                <MessageBoxContainer ref={node=>{this.messageBoxContainer = node}}/>
             </div>
         )
     }

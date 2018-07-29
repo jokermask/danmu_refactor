@@ -12,8 +12,8 @@ const mapStateToProps = state => ({
 
 function mapDispatchToProps(dispatch) {
     return {
-        checkLogin: () => {
-            dispatch(checkLoginAction())
+        checkLogin: (callback) => {
+            dispatch(checkLoginAction(callback))
         }
     }
 }
