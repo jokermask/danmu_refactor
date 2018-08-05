@@ -5,45 +5,53 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import style from './css/RegisterForm.css'
 import closeBtnPng from '../../img/close-btn.png'
-import {POST} from '../utils/ajax'
+import { message } from 'antd'
 import { SubmissionError } from 'redux-form'
+import { connect } from 'react-redux'
+import { registerAction } from '../reducers/loginState'
 
-
-const registerReq = async function(values) {
-    let usernameReg = /^[A-Za-z0-9|_]{6,16}$/;//6~16位字母数字下划线
-    let passwordReg = /^[@A-Za-z0-9!#$%^&*.~]{6,16}$/ ;//6~16位可包含特殊字符
-    let emailReg = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/ ;
-    if (!values.username||!usernameReg.test(values.username)) {
-        throw new SubmissionError({
-            _error: '账户为空或格式错误'
-        })
-    }
-    if (!values.password||!passwordReg.test(values.username)) {
-        throw new SubmissionError({
-            _error: '密码为空或格式错误'
-        })
-    }
-
-    if(values.password!==values.pwdconfirm){
-        throw new SubmissionError({
-            _error: '两次密码不一致'
-        })
-    }
-
-    if(!values.email||!emailReg.test(values.email)){
-        throw new SubmissionError({
-            _error: '邮箱为空或格式不正确'
-        })
-    }
-
-    let reg_data = {...values} ;
-    delete reg_data.pwdconfirm
-    var res = await POST("/user/register",reg_data)
-    console.log(res)
-}
 
 let RegisterForm = props => {
-    const { handleSubmit, boxHandler, error } = props
+    const { handleSubmit, boxHandler, error, registerSubmit } = props
+
+    const registerReq =  function(values) {
+        let usernameReg = /^[A-Za-z0-9|_]{6,16}$/;//6~16位字母数字下划线
+        let passwordReg = /^[@A-Za-z0-9!#$%^&*.~]{6,16}$/ ;//6~16位可包含特殊字符
+        let emailReg = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/ ;
+        if (!values.username||!usernameReg.test(values.username)) {
+            throw new SubmissionError({
+                _error: '账户为空或格式错误'
+            })
+        }
+        if (!values.password||!passwordReg.test(values.username)) {
+            throw new SubmissionError({
+                _error: '密码为空或格式错误'
+            })
+        }
+
+        if(values.password!==values.pwdconfirm){
+            throw new SubmissionError({
+                _error: '两次密码不一致'
+            })
+        }
+
+        if(!values.email||!emailReg.test(values.email)){
+            throw new SubmissionError({
+                _error: '邮箱为空或格式不正确'
+            })
+        }
+
+        let reg_data = {...values} ;
+        delete reg_data.pwdconfirm
+        registerSubmit(reg_data,(res)=>{
+            if(res.code===0){
+                message.success('注册成功')
+                boxHandler.closeRegisterBox()
+            }else{
+                message.error('注册失败')
+            }
+        })
+    }
 
     return (
         <div className={style.registerMask}>
@@ -76,10 +84,18 @@ let RegisterForm = props => {
     )
 }
 
-RegisterForm = reduxForm({
+const mapDispatchToProps = (dispatch) => {
+    return {
+        registerSubmit: (data,callback) => {
+            dispatch(registerAction(data,callback))
+        }
+    }
+}
+
+RegisterForm = connect(null,mapDispatchToProps)(reduxForm({
     // a unique name for the form
-    form: 'registerForm',
-    registerReq
-})(RegisterForm)
+    form: 'registerForm'
+})(RegisterForm))
+
 
 export default RegisterForm;

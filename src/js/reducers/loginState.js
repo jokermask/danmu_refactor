@@ -58,6 +58,26 @@ export const loginAction = (data,callback) => {
     };
 }
 
+export const registerAction = (data,callback) => {
+    // We don't really need the dispatch
+    // but here it is if you don't bind your actions
+    return dispatch => {
+        // state: { running: false, result: false }
+        dispatch(start())
+        // state: { running: true, result: false }
+        return POST('/user/register',data)
+            .then((res)=>{
+                console.log(res)
+                dispatch(success(res))
+                callback(res)
+                return res
+            })
+            .catch(
+                dispatch(fail())
+            )
+    };
+}
+
 export const checkLoginAction = (callback) => {
     // We don't really need the dispatch
     // but here it is if you don't bind your actions

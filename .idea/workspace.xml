@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7258f4-44b0-40ac-b875-0e53fa982778" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/DanmuBox.js" afterPath="$PROJECT_DIR$/src/js/components/DanmuBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/UserPanel.js" afterPath="$PROJECT_DIR$/src/js/components/UserPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/VideoRoom.js" afterPath="$PROJECT_DIR$/src/js/components/VideoRoom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/css/UserPanel.css" afterPath="$PROJECT_DIR$/src/js/components/css/UserPanel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/css/UserPanel.scss" afterPath="$PROJECT_DIR$/src/js/components/css/UserPanel.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/DanmuContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/DanmuContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/UserPanelContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/UserPanelContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/VideListContainer.js" afterPath="$PROJECT_DIR$/src/js/containers/VideListContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/RegisterForm.js" afterPath="$PROJECT_DIR$/src/js/components/RegisterForm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/reducers/loginState.js" afterPath="$PROJECT_DIR$/src/js/reducers/loginState.js" />
     </list>
     <ignored path="react-learn-1.iws" />
@@ -32,11 +25,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="VideoRoom.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VideoRoom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/VideoRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75838923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="216" column="30" selection-start-line="216" selection-start-column="30" selection-end-line="216" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPanelContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/containers/LoginPanelContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/LoginPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginState.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/reducers/loginState.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.087248325">
+              <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/RegisterForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/LoginForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socketServer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socketServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -47,86 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserPanelContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/containers/UserPanelContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DanmuContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/containers/DanmuContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoRoom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/videoRoom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeaderContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/containers/HeaderContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideListContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/containers/VideListContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/UserPanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginState.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/reducers/loginState.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -170,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/js/components/App.js" />
         <option value="$PROJECT_DIR$/src/js/reducers/videoControlReducer.js" />
         <option value="$PROJECT_DIR$/src/js/components/css/DanmuBox.scss" />
-        <option value="$PROJECT_DIR$/src/js/components/RegisterForm.js" />
         <option value="$PROJECT_DIR$/src/js/components/css/RegisterForm.scss" />
         <option value="$PROJECT_DIR$/src/js/components/css/LoginForm.scss" />
         <option value="$PROJECT_DIR$/src/js/containers/HeaderContainer.js" />
@@ -195,10 +187,11 @@
         <option value="$PROJECT_DIR$/src/js/containers/DanmuContainer.js" />
         <option value="$PROJECT_DIR$/src/js/components/DanmuBox.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
-        <option value="$PROJECT_DIR$/src/js/reducers/loginState.js" />
         <option value="$PROJECT_DIR$/src/js/containers/UserPanelContainer.js" />
         <option value="$PROJECT_DIR$/src/js/components/UserPanel.js" />
         <option value="$PROJECT_DIR$/src/js/components/VideoRoom.js" />
+        <option value="$PROJECT_DIR$/src/js/reducers/loginState.js" />
+        <option value="$PROJECT_DIR$/src/js/components/RegisterForm.js" />
       </list>
     </option>
   </component>
@@ -464,6 +457,10 @@
               <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -511,19 +508,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\webstorm\workspace\react-learn-1" />
-      <recent name="E:\webstorm\workspace\react-learn-1\public\media\video" />
-      <recent name="E:\webstorm\workspace\react-learn-1\public\media\img" />
-      <recent name="E:\webstorm\workspace\react-learn-1\config" />
-      <recent name="E:\webstorm\workspace\react-learn-1\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\webstorm\workspace\react-learn-1\src\js\containers" />
       <recent name="E:\webstorm\workspace\react-learn-1\src\js\components\css" />
       <recent name="E:\webstorm\workspace\react-learn-1\src\js" />
       <recent name="E:\webstorm\workspace\react-learn-1\src\js\components" />
       <recent name="E:\webstorm\workspace\react-learn-1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\webstorm\workspace\react-learn-1\public\media\img" />
+      <recent name="E:\webstorm\workspace\react-learn-1" />
+      <recent name="E:\webstorm\workspace\react-learn-1\public\media\video" />
+      <recent name="E:\webstorm\workspace\react-learn-1\config" />
+      <recent name="E:\webstorm\workspace\react-learn-1\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -599,10 +596,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1912" height="1048" extended-state="1" />
+    <frame x="-9" y="0" width="1912" height="1048" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19325481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19325481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -715,20 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/LoginPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/RegisterForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/css/RegisterForm.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.4">
@@ -754,13 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/LoginForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -862,22 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socketServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/css/UserPanel.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1111112">
@@ -918,14 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/containers/LoginPanelContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -938,22 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/reducers/loginState.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1014,10 +950,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/socketServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/containers/LoginPanelContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/VideoRoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75838923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="216" column="30" selection-start-line="216" selection-start-column="30" selection-end-line="216" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/LoginPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/LoginForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/RegisterForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/reducers/loginState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.087248325">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="22" />
           <folding />
         </state>
       </provider>
