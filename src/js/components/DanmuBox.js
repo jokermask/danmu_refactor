@@ -25,9 +25,9 @@ class DanmuBox extends Component{
     }
 
     componentWillReceiveProps(nextProps){
-        const { danmulist, currentTime, isPlaying } = this.props
+        const { danmulist, currentTime, isPlaying, isDanmuOn } = this.props
 
-        if(isPlaying&&currentTime!=this.currentTime) {
+        if(isDanmuOn&&isPlaying&&currentTime!=this.currentTime) {
             danmulist.forEach(danmu=>{
                 if(danmu.play_time === currentTime) {
                     this.addDanmu(danmu)

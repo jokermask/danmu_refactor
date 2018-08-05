@@ -3,11 +3,16 @@
  */
 import React, { Component } from 'react'
 import style from './css/UserPanel.css'
+import { message } from 'antd'
 
 class UserPanel extends Component{
 
     render(){
-        const { userNickname, userIconUrl } = this.props
+        const { userNickname, userIconUrl, logoffAction } = this.props
+
+        const incomplete = ()=>{
+            message.error('该功能暂时不开放')
+        }
 
         return(
         <div className={style.userPanel}>
@@ -16,9 +21,9 @@ class UserPanel extends Component{
                 <p>{userNickname}</p>
             </div>
             <ul className={style.userMenu}>
-                <li>投稿</li>
-                <li>空间</li>
-                <li>注销</li>
+                <li onClick={incomplete}>投稿</li>
+                <li onClick={incomplete}>空间</li>
+                <li onClick={logoffAction}>注销</li>
             </ul>
         </div>
     )}

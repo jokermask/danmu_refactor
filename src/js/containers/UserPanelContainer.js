@@ -1,6 +1,6 @@
 import UserPanel from '../components/UserPanel'
 import { connect } from 'react-redux'
-
+import { logoffAction } from '../reducers/loginState'
 
 const mapStateToProps = state => ({
     userNickname:state.loginState.userNickname,
@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
 
 function mapDispatchToProps(dispatch) {
     return {
+        logoffAction:()=>{dispatch(logoffAction())}
     }
 }
 

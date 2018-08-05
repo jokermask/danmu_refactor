@@ -175,6 +175,21 @@ class VideoRoom extends Component{
 
         }
 
+        const markVideo = ()=>{
+            message.error('功能暂时不开放')
+            //checkLogin((res)=>{
+            //    if(res.isLogin){
+            //        uploadDanmu(newDanmu,(danmu)=>{
+            //            danmuBox.addDanmu(danmu)
+            //            socket.emit('message',danmu);
+            //            messageBox.addNewMessage(danmu)
+            //        })
+            //    }else{
+            //        message.error('登录之后才能发送弹幕')
+            //    }
+            //})
+        }
+
 
         return(
             <div className={style.videoLayout}>
@@ -191,14 +206,14 @@ class VideoRoom extends Component{
                                 <b className={controlState.volPercent>0?style.volumeOn:style.volumeOff} onClick={toggleVol}/>
                                 <div className={style.volSliderWrap}><Slider className={style.volSlider} value={controlState.volPercent} vertical={false} onChange={onVolChange}/></div>
                             </div>
-                            <div className={controlState.isDanmuOn?style.danmuOn:style.danmuOff} title="弹幕开关"></div>
+                            <div className={controlState.isDanmuOn?style.danmuOn:style.danmuOff} onClick={videoControl.toggleDanmuSwitch} title="弹幕开关"></div>
                         </div>
                         <div className={style.sendLayer}>
                             <b className={style.danmuSettingIcon} title="设置弹幕" onClick={videoControl.toggleSettingMenu}/>
                             {controlState.isSettingMenuOn ?danmuSetting:""}
                             <input className={style.danmuInput} onChange={onInputChange} type="text"/>
                             <input className={style.sendDanmuBtn} onClick={sendDanmu} type="button" value="发送弹幕"/>
-                            <b className={isLike?style.videoMarked:style.videoUnmarked} title="收藏或取消"/>
+                            <b className={isLike?style.videoMarked:style.videoUnmarked} onClick={markVideo} title="收藏或取消"/>
                         </div>
                     </div>
                 </div>

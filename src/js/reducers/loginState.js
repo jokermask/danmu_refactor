@@ -78,4 +78,21 @@ export const checkLoginAction = (callback) => {
     };
 }
 
+export const logoffAction = () => {
+    // We don't really need the dispatch
+    // but here it is if you don't bind your actions
+    return dispatch => {
+        // state: { running: false, result: false }
+        dispatch(start())
+        // state: { running: true, result: false }
+        return POST('/user/logout')
+            .then((res)=>{
+                dispatch(toLogoffState())
+                return res
+            })
+            .catch(
+                dispatch(fail())
+            )
+    };
+}
 export default loginState

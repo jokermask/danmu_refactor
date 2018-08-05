@@ -19,6 +19,7 @@ class VideoList extends Component{
         const { fetchVideos } = this.props
         fetchVideos()
     }
+
     render(){
         const { videolist } = this.props
         return (

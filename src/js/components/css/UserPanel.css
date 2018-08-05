@@ -25,7 +25,8 @@
   width: 100%;
   text-align: center;
   transition: all 1s;
-  background-color: #3d444c; }
+  background-color: #3d444c;
+  z-index: 100; }
   .userMenu li {
     width: 100%;
     margin: .5em 0;
