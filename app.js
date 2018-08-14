@@ -96,7 +96,7 @@ var server = http.createServer(app);
 
 require('./socketServer').listen(server)//websocket
 
-server.listen(process.env.PORT || 3000, function(err) {
+server.listen(process.env.PORT || 3001, function(err) {
     if (err) {
         console.error(err);
         return;

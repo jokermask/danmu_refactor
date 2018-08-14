@@ -93,8 +93,12 @@ router.post('/register', function (req,res) {
           return res.send(data) ;
         }else{
           data.code = 0 ;
+          data.userNickname = user.nickname ;
+          data.userName = user.username ;
+          data.userIconUrl = user.icon_path ;
           req.session.username = user.username ;
           req.session.nickname = user.nickname ;
+          req.session.icon_path = user.icon_path ;
           return res.send(data) ;
         }
       });

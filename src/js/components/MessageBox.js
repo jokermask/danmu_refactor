@@ -39,7 +39,7 @@ class MessageBox extends Component{
                         {
                             messageList.map(item=>{
                                 return (
-                                    <p key={item.id}><b className={style.messagesAuthor}>{timeNow+item.nickname+": "}</b>{item.content}</p>
+                                    <li key={item.id}><b className={style.messagesAuthor}>{timeNow+item.nickname+": "}</b>{item.content}</li>
                                 )
                             })
                         }

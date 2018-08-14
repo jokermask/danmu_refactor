@@ -40,7 +40,7 @@ class VideoRoom extends Component{
         const { controlState } = this.props
 
 
-        this.socket = io.connect("http://localhost:3000",['websocket'])
+        this.socket = io.connect("http://localhost:3001",['websocket'])
         let socket = this.socket
         //加入自己所在视频的聊天房间
         socket.emit('joinRoom',roomId)
@@ -48,11 +48,11 @@ class VideoRoom extends Component{
         socket.on('connect', function () {
 
             socket.on('message',function(danmu){
-                //如果播放时间之差小于2秒才添加弹幕
-                if(Math.abs(danmu.play_time-controlState.currentTime)<5){
+                ////如果播放时间之差小于2秒才添加弹幕
+                //if(Math.abs(danmu.play_time-controlState.currentTime)<5){
                     danmuBox.addDanmu(danmu)
                     messageBox.addNewMessage(danmu)
-                }
+                //}
             })
 
             socket.on('disconnect',function(){
@@ -151,7 +151,7 @@ class VideoRoom extends Component{
         const sendDanmu = () => {
             const danmuBox = this.danmuContainer.getWrappedInstance()
             const messageBox = this.messageBoxContainer.getWrappedInstance()
-            let socket = this.sockete
+            let socket = this.socket
             var newDanmu = {
                 color: controlState.danmuColor,
                 content: controlState.danmuInput,
