@@ -48,7 +48,7 @@ let RegisterForm = props => {
                 message.success('注册成功')
                 boxHandler.closeRegisterBox()
             }else{
-                message.error('注册失败')
+                message.error(res.err)
             }
         })
     }

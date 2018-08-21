@@ -12,6 +12,7 @@ export const setDanmuInput = createAction() ;
 export const setVol = createAction() ;
 export const setPlayProgress = createAction() ;
 export const setCurrentTime = createAction() ;
+export const resetState = createAction() ;
 
 const defaultState = {
     canPlayThrough: false,
@@ -38,7 +39,8 @@ const videoControlReducer = createReducer({
     [setVol]:(state,val)=>{return {...state,volPercent:val}},
     [setDanmuInput]:(state,val)=>{return {...state,danmuInput:val}},
     [setPlayProgress]:(state,val)=>{return {...state,playPercent:val}},
-    [setCurrentTime]:(state,val)=>{return {...state,currentTime:Math.ceil(val)}}
+    [setCurrentTime]:(state,val)=>{return {...state,currentTime:Math.ceil(val)}},
+    [resetState]:(state)=>{return defaultState}
 },defaultState)
 
 export default videoControlReducer

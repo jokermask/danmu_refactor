@@ -9,6 +9,7 @@ import io from 'socket.io-client'
 class VideoRoom extends Component{
 
     componentDidMount(){
+
         const { getVideo, videoControl } = this.props
         const videoId = this.props.match.params.videoId
         getVideo({_id:videoId})
@@ -31,6 +32,14 @@ class VideoRoom extends Component{
         })
         //init this.socket
         this.initSocket()
+    }
+
+    componentWillUnmount(){
+        const { videoControl } = this.props
+        console.log("video room unmounted")
+        window.clearInterval(this.progressFlag)
+        window.clearInterval(this.timeFlag)
+        videoControl.resetState()
     }
 
     initSocket(){
@@ -116,6 +125,7 @@ class VideoRoom extends Component{
                 }, 60)
                 this.timeFlag = setInterval(()=> {
                     var currentTime = this.videoEle.currentTime
+                    console.log("currenttime"+currentTime)
                     videoControl.setCurrentTime(currentTime)
                 }, 1000)
             }else{
